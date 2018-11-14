@@ -20,4 +20,4 @@ http.createServer(function (req, res) {
 
   ms.pipe(req, res, path.join(__dirname, _path), path.extname(_path));
 
-}).listen(1337, '127.0.0.1');
+}).listen(443, '127.0.0.1');
