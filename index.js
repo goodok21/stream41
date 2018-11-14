@@ -2,6 +2,7 @@ const http = require('http');
 const ms = require('mediaserver');
 
 var path = require('path');
+console.log('started');
 
 http.createServer(function (req, res) {
 
