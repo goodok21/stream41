@@ -1,12 +1,16 @@
 const http = require('http');
 const ms = require('mediaserver');
-
 var path = require('path');
 
+const port = process.env.PORT || 1337;
+const host = process.env.HOST || 'localhost';
+
+console.log('App started');
 http.createServer(function (req, res) {
 
   var _path;
   if(req.url == "/" || req.url == "/index.html"){
+    console.log('Index getted');
     _path = "/index.html";
   } else if (req.url == "/birds.ogg") {
     _path = "/birds.ogg";
@@ -20,4 +24,4 @@ http.createServer(function (req, res) {
 
   ms.pipe(req, res, path.join(__dirname, _path), path.extname(_path));
 
-}).listen(1337);
+}).listen(port, host);
