@@ -2,7 +2,7 @@ const http = require('http');
 const ms = require('mediaserver');
 var path = require('path');
 
-const port = process.env.PORT || 1337;
+const port = process.env.PORT || 3000;
 const host = process.env.HOST || 'localhost';
 
 console.log('App started');
