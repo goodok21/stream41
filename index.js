@@ -11,7 +11,7 @@ http.createServer(function (req, res) {
   var _path;
   if(req.url == "/" || req.url == "/index.html"){
     console.log('Index getted');
-    _path = "front/build/index.html";
+    _path = "/index.html";
   } else if (req.url == "/birds.ogg") {
     _path = "/birds.ogg";
   } else if (req.url == "/videoplayback") {
